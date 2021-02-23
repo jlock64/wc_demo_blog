@@ -1,4 +1,4 @@
-<% content_for :page_title, "Index"%>
+<% content_for :page_title, "Welcome to Demo Blog"%>
 
 <section class="section">
   <div class="container">
@@ -7,7 +7,8 @@
         <div class="card-content">
           <div class="media">
             <div class="media-content">
-              <p class="title is-4"><%= link_to post.title, post %></p>
+              <p class="title is-4 mb-1"><%= link_to post.title, post %></p>
+              <p><%= post.created_at.in_time_zone('Eastern Time (US & Canada)').strftime("Created on %m/%d/%Y at %I:%M%p") %></p>
             </div>
           </div>
           <div class="content">
